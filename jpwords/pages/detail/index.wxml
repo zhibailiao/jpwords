@@ -1,0 +1,10 @@
+<!--pages/detail/index.wxml-->
+<text>{{contents}}</text>
+<textarea class="weui-textarea mycss-ta" placeholder="添加笔记.." style="height: 4.0em" bindinput="bindKeyInput" name="note" value='{{addnote}}' />
+<button class="weui-btn mini-btn mycss-btn" type="primary" bindtap='addnote' size="mini">
+  <image src="../../images/3.png" class='mcss-img' />
+  <text>提交笔记</text>
+</button>
+<view class='mcss-notehis'>
+  <text class='mcss-txt' wx:for='{{notearr}}'>历史笔记{{index+1}}☛{{item}}\r\n</text>
+</view>

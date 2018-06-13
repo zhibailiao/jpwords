@@ -1,0 +1,31 @@
+<view class="page">
+  <view class="page__bd page__bd_spacing">
+    <!-- form-->
+    <view class="weui-flex mcss-view-pinlun">
+      <view class="weui-flex__item ">
+        <form bindsubmit="formSubmit" bindreset="formReset">
+          <view class="weui-cells__title mycss-formtitle mcss-need">(必須)类型:</view>
+          <view class="weui-cell weui-cell_select">
+            <view class="weui-cell__bd">
+              <picker bindchange="bindCountryChange" name="type" value="{{jpwType[typeIndex]}}" range="{{jpwType}}">
+                <view class="weui-select weui-select_in-select-after">{{jpwType[typeIndex]}}</view>
+              </picker>
+            </view>
+          </view>
+          <view class="weui-cells__title mycss-formtitle mcss-need">(必須)汉字(漢字・かんじ):</view>
+          <input class="weui-input mycss-ta" placeholder="请输入汉字.." name="kannji" value='{{kannji}}' />
+          <view class="weui-cells__title mycss-formtitle mcss-need">(必須)假名(カナ):</view>
+          <input class="weui-input mycss-ta" placeholder="请输入假名.." name="kana" value='{{kana}}' />
+          <view class="weui-cells__title mycss-formtitle">意思(意味):</view>
+          <input class="weui-input mycss-ta" placeholder="请输入单词意思.." name="yimi" value='{{yimi}}' />
+          <view class="weui-cells__title mycss-formtitle">举例(例):</view>
+          <textarea class="weui-textarea mycss-ta" placeholder="请输入您想说的话.." style="height: 4.0em" bindinput="bindKeyInput" name="note" value='{{note}}' />
+          <button class="weui-btn mini-btn mycss-btn" type="primary" form-type="submit" size="mini">
+            <image src="../../images/3.png" class='mcss-img' />
+            <text>添加单词</text>
+          </button>
+        </form>
+      </view>
+    </view>
+  </view>
+</view>

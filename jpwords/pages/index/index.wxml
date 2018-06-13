@@ -1,0 +1,90 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="page__bd page__bd_spacing">
+    <!-- music-->
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <!-- music -->
+        <view wx:if="{{music_url}}">
+          <view wx:if="{{isPlayingMusic}}">
+            <view class="background_music" bindtap="play">
+              <image src="/images/music_icon.png" class="musicImg music_icon" />
+              <image src="/images/music_play.png" class="music_play pauseImg" />
+            </view>
+          </view>
+          <view wx:else>
+            <view class="background_music" bindtap="play">
+              <image src="/images/music_icon.png" class="musicImg" />
+              <image src="/images/music_play.png" class="music_play playImg" />
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <!-- gallery-->
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <swiper wx:if="{{slideList!=null}}" class="index-banner" indicator-dots="false" autoplay="false" interval="5000" duration="1000">
+          <swiper-item wx:for="{{slideList}}" wx:key="slide" wx:id="id" wx:if="{{item.image}}">
+            <image src="{{item.image}}" class="slide-image" mode="scaleToFill" />
+          </swiper-item>
+        </swiper>
+        <view wx:else class="weui-loadmore__tips">正在加载</view>
+      </view>
+    </view>
+    <!-- search-->
+    <view class='weui-flex'>
+      <view class="weui-flex__item">
+        <view class="weui-search-bar mcss-search">
+          <view class="weui-search-bar__form">
+            <view class="weui-search-bar__box">
+              <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+              <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+              <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                <icon type="clear" size="14"></icon>
+              </view>
+            </view>
+            <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+              <icon class="weui-icon-search" type="search" size="14"></icon>
+              <view class="weui-search-bar__text">搜索</view>
+            </label>
+          </view>
+          <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="showresult">查询</view>
+          <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+      </view>
+    </view>
+    <!-- Item List-->
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <view class="weui-panel weui-panel_access">
+          <view class="weui-panel__bd">
+            <navigator url="../detail/index?id={{item.id}}&kannji={{item.kannji}}" class="weui-media-box weui-media-box_appmsg mycss-nav" hover-class="weui-cell_active" wx:for="{{list}}" wx:key="{{item.id}}">
+              <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                <image class="weui-media-box__thumb mycss-img" src="/images/5.png" />
+                <text class='mycss-txt'>{{index+1}}</text>
+              </view>
+              <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                <view class="weui-media-box__title mycss-txt">
+                  <text>{{item.kannji}}・{{item.kana}}</text>
+                </view>
+                <view class="weui-media-box__desc">
+                  <text>{{item.yimi}}</text>
+                </view>
+                <button class="weui-btn mini-btn mycss-btn" type='primary' size="mini">
+                  <image src='/images/5.png' class='mcss-img'></image>
+                  <text>详细..</text>
+                </button>
+                <button class="weui-btn mini-btn mycss-btn" size="mini">
+                  <!-- <image src='/images/zan.png' class='mcss-img'></image>   -->
+                  <text>{{item.type}} </text>
+                </button>
+              </view>
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

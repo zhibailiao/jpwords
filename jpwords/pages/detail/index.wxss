@@ -1,0 +1,22 @@
+/* pages/detail/index.wxss */
+.mycss-ta{
+  margin-top: 30px;
+  border: solid 1px;
+}
+/* 按钮*/
+.mycss-btn{
+  margin-top: 2px;
+  float: right;
+}
+.mcss-img{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  float :left;
+}
+.mcss-notehis{
+  margin-top: 40px;
+}
+.mcss-txt{
+  background-color: deepskyblue;
+}

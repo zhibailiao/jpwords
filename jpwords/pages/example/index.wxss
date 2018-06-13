@@ -1,0 +1,144 @@
+.placeholder{
+    margin: 5px;
+    padding: 0 10px;
+    text-align: center;
+    background-color: #EBEBEB;
+    height: 2.3em;
+    line-height: 2.3em;
+    color: #cfcfcf;
+}
+.weui-footer{
+    margin-bottom: 50px;
+}
+.weui-footer_fixed-bottom{
+    margin-bottom: 0;
+}
+/* 滑动图片*/
+.index-banner{
+	width: 100%;
+	height: 400rpx;
+}
+.index-banner .slide-image{
+	width: 100%;
+  border-radius: 10px;
+}
+
+/* 导航栏*/
+.index-menu{
+	width: 100%;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	background: #fff;
+}
+.index-menu-item{
+	-webkit-flex: 0 0 25%;
+	-webkit-box-flex: 0;
+	        flex: 0 0 25%;
+	max-width: 25%;
+	text-align: center;
+	margin-top: 0rpx;
+/* 	border-top: 1rpx solid #ddd;
+	border-bottom: 1rpx solid #ddd;
+	border-right: 1rpx solid #ddd; */
+	padding: 15rpx 0rpx 15rpx 0rpx;
+	box-sizing: border-box;
+	margin-bottom: 0rpx;
+}
+.index-menu-item image{
+	width: 80rpx;
+	height: 50rpx;
+  padding: 0px;
+  margin: 0px;
+}
+.index-menu-item text{
+	display: block;
+	font-size: 30rpx;
+	line-height: 0.4;
+	white-space: nowrap;
+  padding: 0px;
+  margin: 0px;
+}
+/*list*/
+.mycss-nav{
+  padding: 1px;
+}
+.mycss-img{
+  width: 70%;
+  height: 70%;
+  border-radius: 50%; 
+}
+.mycss-txt{
+  padding: 0px;
+}
+
+.mycss-btn{
+  float: right;
+  font-size:medium;
+}
+.mycss-btn-login{
+  float: left;
+  font-size: xx-small;
+}
+/*logo*/
+.profileTxt{
+  line-height: 50rpx;
+  font-size: small;
+}
+.profile{
+  width: 50rpx;
+  height: 50rpx;
+  border: 0 solid #ff0000;
+  border-radius: 100rpx;
+  background-color: #f10b2e;
+}
+/*登录按钮*/
+.mcss-img{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  float :left;
+}
+.mcss-ls{
+  /* margin-left: 0px; */
+  padding-left: 0px;
+  font-size:medium;
+  color:deepskyblue;
+}
+.mcss-ft{
+   /* margin-bottom: 10px;  */
+   padding-bottom: 0px; 
+}
+/* music */
+.background_music{
+  position: fixed;
+  top: 20rpx;
+  right: 10rpx;
+  z-index: 10001;
+  width: 100rpx;
+}
+.musicImg{
+  width: 80rpx;
+  height: 80rpx;
+}
+.music_icon{
+  animation:musicRotate 3s linear infinite;
+}
+.music_play{
+  width:28rpx;
+  height: 80rpx;
+  margin-left:-5px;
+  transform-origin: top;
+  -webkit-transform:rotate(20deg)
+}
+.playImg{
+  animation:musicStop 1s linear forwards ;
+}
+.pauseImg{
+  animation:musicStart 1s linear forwards ;
+}
+.mcss-search{
+  padding: 0px;
+}

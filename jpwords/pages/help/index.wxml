@@ -1,0 +1,45 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="page__bd page__bd_spacing">
+    <!-- 使用帮助-->
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <view class="weui-panel weui-panel_access">
+          <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_text">
+              <view class="weui-media-box__title weui-media-box__title_in-text">使用说明</view>
+              <view class="mcss-txt">
+                <text class="mcss-txt">{{usage}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 荣誉墙-->
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <view class="weui-panel weui-panel_access">
+          <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_text">
+              <view class="weui-media-box__title weui-media-box__title_in-text">
+                <view>点赞榜(^ω^)</view>
+                <button class="weui-btn mini-btn mycss-btn" type='primary' size="mini" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+                  <image src='/images/zan.png' class='mcss-img'></image>
+                  <text>求赞</text>
+                </button>
+              </view>
+              <!-- 这些好友给你点赞了↓ -->
+              <view class="friends">
+                <view class="face" wx:for="{{zanLog}}" wx:key="user">
+                  <image src="{{item.face}}" />
+                  <!-- <text>{{item.nickname}}</text> -->
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

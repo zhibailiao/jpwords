@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="page__bd page__bd_spacing">
+    <!-- search-->
+    <view class='weui-flex'>
+      <view class="weui-flex__item">
+        <view class="weui-search-bar mcss-search">
+          <view class="weui-search-bar__form">
+            <view class="weui-search-bar__box">
+              <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+              <input type="text" class="weui-search-bar__input" placeholder="输入语句(例文入力)" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+              <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                <icon type="clear" size="14"></icon>
+              </view>
+            </view>
+            <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+              <icon class="weui-icon-search" type="search" size="14"></icon>
+              <view class="weui-search-bar__text">输入语句(例文入力)</view>
+            </label>
+          </view>
+          <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="showresult">查询</view>
+          <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+      </view>
+    </view>
+    <!-- Item List-->
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <view class="weui-panel weui-panel_access">
+          <view class="weui-panel__bd">
+            <navigator url="" class="weui-media-box weui-media-box_appmsg mycss-nav" hover-class="weui-cell_active" wx:for="{{list}}">
+              <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                <image class="weui-media-box__thumb mycss-img" src="/images/5.png" />
+                <text class='mycss-txt'>{{index+1}}</text>
+              </view>
+              <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                 <!-- <view class="weui-media-box__title mycss-txt">
+                  <text>{{inputVal}}</text>
+                </view>  -->
+                <view class="weui-media-box__desc">
+                  <text>{{item}}</text>
+                </view>
+              </view>
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

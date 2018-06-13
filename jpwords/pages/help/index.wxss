@@ -1,0 +1,33 @@
+/* pages/help/index.wxss */
+.mcss-txt{
+  font-size: small;
+}
+.mycss-btn{
+  float: right;
+  font-size:medium;
+}
+.mcss-img{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  float :left;
+}
+/* zan*/
+.friends {
+  min-height: 0;
+  overflow: hidden;
+  width: 600rpx;
+  /* margin: 0 auto;
+  margin-top: 20rpx; */
+}
+.face {
+  width: 100rpx;
+  height: 100rpx;
+  float: left;
+  margin: 1rpx;
+}
+.face image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 80%;
+}
